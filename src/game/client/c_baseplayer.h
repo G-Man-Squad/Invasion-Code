@@ -567,6 +567,7 @@ private:
 	friend class CPrediction;
 
 	// HACK FOR TF2 Prediction
+	friend class CTFGameMovementCommando;
 	friend class CTFGameMovementRecon;
 	friend class CGameMovement;
 	friend class CTFGameMovement;

@@ -58,6 +58,8 @@ int	C_BaseCombatCharacter::GetAmmoCount( char *szName ) const
 }
 */
 
+#ifndef INVASION_CLIENT_DLL
+
 //-----------------------------------------------------------------------------
 // Purpose: 
 //-----------------------------------------------------------------------------
@@ -84,6 +86,8 @@ void C_BaseCombatCharacter::OnDataChanged( DataUpdateType_t updateType )
 	}
 #endif // GLOWS_ENABLE
 }
+
+#endif
 
 //-----------------------------------------------------------------------------
 // Purpose: Overload our muzzle flash and send it to any actively held weapon

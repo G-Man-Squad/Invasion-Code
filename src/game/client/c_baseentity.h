@@ -28,6 +28,7 @@
 #include "predictableid.h"
 #endif
 #include "soundflags.h"
+#include "../engine/audio/public/sound.h"
 #include "shareddefs.h"
 #include "networkvar.h"
 #include "interpolatedvar.h"
@@ -1154,7 +1155,7 @@ public:
 	int		GetCreationTick() const;
 
 	virtual void ClientAdjustStartSoundParams( EmitSound_t &params ) {}
-	virtual void ClientAdjustStartSoundParams( StartSoundParams_t& params ) {}
+	virtual void ClientAdjustStartSoundParams( StartSoundParams_t &params ) {}
 
 #ifdef _DEBUG
 	void FunctionCheck( void *pFunction, const char *name );

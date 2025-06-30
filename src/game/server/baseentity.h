@@ -1436,6 +1436,11 @@ public:
 	// Use CDamageModifier to hook in damage modifiers on a guy.
 	virtual float			GetReceivedDamageScale( CBaseEntity *pAttacker );
 
+#if defined( INVASION_DLL )
+	virtual bool			CanBePoweredUp( void ) { return false; }
+	virtual bool			AttemptToPowerup( int iPowerup, float flTime, float flAmount = 0, CBaseEntity *pAttacker = NULL, CDamageModifier *pDamageModifier = NULL ) { return false; }
+#endif
+
  	void					SetCheckUntouch( bool check );
 	bool					GetCheckUntouch() const;
 
